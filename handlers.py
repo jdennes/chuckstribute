@@ -1,6 +1,6 @@
 
 import sys, os
-from itertools import izip_longest
+from itertools import izip
 
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
@@ -11,7 +11,7 @@ from models import ChucksImage
 class MainHandler(webapp.RequestHandler):
 
   def grouper(self, n, iterable, padvalue=None):
-      return izip_longest(*[iter(iterable)]*n, fillvalue=padvalue)
+    return izip(*[iter(iterable)]*n)
 
   def get(self):
 
