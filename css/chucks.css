@@ -1,0 +1,27 @@
+body {
+  font-size: 14px;
+  color: #5c5c5c;
+  background-color: #111111;
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+}
+a:link, a:visited { color: #3D3D3D  ; text-decoration: underline; }
+a:hover, a:focus { text-decoration: none; background: #231F1F; color: #ffffff; }
+p { margin: 0.3em 0 .3em 0; }
+div#container {
+  margin: 0 auto;
+  width: 960px;
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+}
+div#header { margin: 0 0 18px 0; }
+div#footer { margin: 10px 0 10px 0; }
+
+div.chuck-thumb-row {
+  margin:; 0;
+  padding: 0;
+}
+a.chuck-thumb {
+  margin: 0;
+}

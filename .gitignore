@@ -1,0 +1,9 @@
+*.pyc
+.settings
+.project
+.pydevproject
+data/img/
+data/*.csv
+bulkloader-log*
+bulkloader-progress*
+
