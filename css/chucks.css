@@ -19,9 +19,10 @@ div#header { margin: 0 0 18px 0; }
 div#footer { margin: 10px 0 10px 0; }
 
 div.chuck-thumb-row {
-  margin:; 0;
+  margin: 0;
   padding: 0;
 }
 a.chuck-thumb {
   margin: 0;
+  padding: 0;
 }

@@ -17,6 +17,7 @@ class MainHandler(webapp.RequestHandler):
 
     # Just get a sample of images to start with - get cooler with colour later...
     query = ChucksImage.all()
+    query.order('-date_added')
     images = query.fetch(144)
     
     rows = self.grouper(n=12, iterable=images)

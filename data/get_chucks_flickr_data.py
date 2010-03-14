@@ -8,9 +8,9 @@ import json
 
 flickr_api_key = '43d8da805db522b18f28040f55cfd020'
 flickr_query = 'chuck+taylor+shoe'
-sort = 'date-posted-asc'
+sort = 'interestingness-desc'
 # Change this for subsequent queries
-page_number = 2
+page_number = 3
 
 flickr_url = 'http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%s&text=%s&page=%d&sort=%s&format=json&nojsoncallback=1' % (flickr_api_key, flickr_query, page_number, sort)
 
@@ -26,6 +26,7 @@ def get_chucks_images():
   opener = urllib2.build_opener()
   f = opener.open(req)
   json_data = json.load(f)
+  print 'Found %s pages of photos (100 photos per page)' % json_data['photos']['pages']
   return json_data['photos']['photo']
 
 def write_data():
