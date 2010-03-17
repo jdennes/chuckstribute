@@ -9,8 +9,8 @@ import json
 flickr_api_key = '43d8da805db522b18f28040f55cfd020'
 flickr_query = 'chuck+taylor+shoe'
 sort = 'interestingness-desc'
-# Change this for subsequent queries
-page_number = 3
+
+page_number = int(sys.argv[1])
 
 flickr_url = 'http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%s&text=%s&page=%d&sort=%s&format=json&nojsoncallback=1' % (flickr_api_key, flickr_query, page_number, sort)
 

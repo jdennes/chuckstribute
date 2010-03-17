@@ -1,1 +1,24 @@
 A project to create a colourful tribute to the Chuck Taylor All-Star.
+
+1. Collect image data using:
+
+cd data
+python get_chucks_flickr_data.py 1
+python get_chucks_flickr_data.py 2
+
+etc...
+
+2. Enter data into local datastore using:
+
+appcfg.py upload_data --config_file=chucks_image_loader.py --filename=data/flickr-chucks-1-20100317231958.csv --kind=ChucksImage --url=http://localhost:8080/remote_api .
+appcfg.py upload_data --config_file=chucks_image_loader.py --filename=data/flickr-chucks-2-20100317231958.csv --kind=ChucksImage --url=http://localhost:8080/remote_api .
+
+etc...
+
+3. Download images for sampling using:
+
+cd data
+./sample_chucks_flickr_images.pl sample-output ../../chuckstribute-img-data
+
+4. TODO: Update datastore with sampled data
+
