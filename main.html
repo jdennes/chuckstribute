@@ -1,10 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-{% for row in rows %}
-<div class="chuck-thumb-row">
-  {% for i in row %}
-  {% if i %}<a class="chuck-thumb" href="http://www.flickr.com/{{i.flickr_user_id}}/{{i.flickr_id}}" target="_blank"><img src="http://farm{{i.flickr_farm}}.static.flickr.com/{{i.flickr_server}}/{{i.flickr_id}}_{{i.flickr_secret}}_s.jpg" width="75" height="75" /></a>{% endif %}
-  {% endfor %}
-</div>
+{% for i in images %}
+{% if i %}<a class="chuck-thumb" href="http://www.flickr.com/{{i.flickr_user_id}}/{{i.flickr_id}}" target="_blank"><img src="http://farm{{i.flickr_farm}}.static.flickr.com/{{i.flickr_server}}/{{i.flickr_id}}_{{i.flickr_secret}}_s.jpg" width="75" height="75" /></a>{% endif %}
 {% endfor %}
+<div class="clear"></div>
 {% endblock %}

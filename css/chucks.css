@@ -18,11 +18,12 @@ div#container {
 div#header { margin: 0 0 18px 0; }
 div#footer { margin: 10px 0 10px 0; }
 
-div.chuck-thumb-row {
-  margin: 0;
-  padding: 0;
-}
 a.chuck-thumb {
-  margin: 0;
+  float: left;
+  margin: 0 5px 5px 0;
   padding: 0;
 }
+
+img { border: 0; }
+
+.clear { clear: both; }

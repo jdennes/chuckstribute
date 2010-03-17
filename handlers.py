@@ -19,8 +19,6 @@ class MainHandler(webapp.RequestHandler):
     query = ChucksImage.all()
     query.order('-date_added')
     images = query.fetch(144)
-    
-    rows = self.grouper(n=12, iterable=images)
     path = os.path.join(os.path.dirname(__file__), 'main.html')
-    values = { 'rows': rows }
+    values = { 'images': images }
     self.response.out.write(template.render(path, values))
