@@ -5,12 +5,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>{% block title %}A colourful tribute to the Chuck Taylor All-Star{% endblock %}</title>
 	<link rel="stylesheet" href="/css/chucks.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  {% block extrajs %}{% endblock %}
 </head>
 <body>
   <div id="container">
     <div id="header">
       <h1>A colourful tribute to the Chuck Taylor All-Star</h1>
-      <div>This will become a whole lot cooler soon...</div>
     </div>
     {% block content %}
     {% endblock %}

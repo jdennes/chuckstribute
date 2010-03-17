@@ -1,5 +1,256 @@
 {% extends "base.html" %}
+
+{% block extrajs %}
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('div.color').each(function(index) {
+        var bgColor = $(this).attr("fill");
+        $(this).css("background", bgColor);
+        $(this).click(function () {
+          // TODO: 
+          // 1. Disable selection until ajax call has completed
+          // 2. Callback should attempt to load the images which match bgColor
+        });
+      });
+    });
+  </script>
+{% endblock %}
+
 {% block content %}
+<div class="spectrum">
+    <div class="color" fill="#ff0000"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0006"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff000d"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0013"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff001a"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0021"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0027"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff002e"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0035"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff003b"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0042"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0048"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff004f"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0056"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff005c"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0063"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff006a"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0070"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0077"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff007d"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0084"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff008b"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0091"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0098"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff009f"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00a5"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00ac"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00b2"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00b9"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00c0"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00c6"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00cd"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00d4"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00da"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00e1"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00e7"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00ee"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00f5"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff00fb"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#fb00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#f400ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ee00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#e700ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#e100ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#da00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#d300ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#cd00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#c600ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#bf00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#b900ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#b200ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ac00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#a500ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#9e00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#9800ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#9100ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#8a00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#8400ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#7d00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#7700ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#7000ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#6900ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#6300ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#5c00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#5500ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#4f00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#4800ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#4200ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#3b00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#3400ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#2e00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#2700ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#2000ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#1a00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#1300ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0d00ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0600ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0000ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0006ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#000dff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0014ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#001aff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0021ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0027ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#002eff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0035ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#003bff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0042ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0049ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#004fff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0056ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#005cff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0063ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#006aff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0070ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0077ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#007eff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0084ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#008bff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0091ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0098ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#009fff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00a5ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00acff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00b3ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00b9ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00c0ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00c6ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00cdff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00d4ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00daff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00e1ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00e8ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00eeff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00f5ff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00fbff"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00fffb"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00fff4"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffee"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffe7"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffe0"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffda"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffd3"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffcc"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffc6"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffbf"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffb9"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffb2"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffab"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ffa5"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff9e"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff97"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff91"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff8a"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff84"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff7d"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff76"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff70"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff69"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff62"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff5c"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff55"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff4f"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff48"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff41"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff3b"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff34"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff2d"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff27"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff20"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff1a"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff13"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff0c"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff06"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#00ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#07ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#0dff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#14ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#1aff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#21ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#28ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#2eff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#35ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#3cff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#42ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#49ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#4fff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#56ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#5dff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#63ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#6aff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#71ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#77ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#7eff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#84ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#8bff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#92ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#98ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#9fff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#a6ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#acff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#b3ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#b9ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#c0ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#c7ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#cdff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#d4ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#dbff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#e1ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#e8ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#eeff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#f5ff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#fcff00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#fffb00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#fff400"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffed00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffe700"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffe000"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffda00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffd300"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffcc00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffc600"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffbf00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffb800"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffb200"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffab00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ffa500"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff9e00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff9700"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff9100"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff8a00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff8300"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff7d00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff7600"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff7000"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff6900"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff6200"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff5c00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff5500"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff4e00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff4800"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff4100"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff3b00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff3400"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff2d00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff2700"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff2000"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff1900"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff1300"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0c00"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="color" fill="#ff0600"><img src="/img/space.gif" width="4" height="20" /></div>
+    <div class="clear"></div>
+</div>
 {% for i in images %}
 {% if i %}<a class="chuck-thumb" href="http://www.flickr.com/{{i.flickr_user_id}}/{{i.flickr_id}}" target="_blank"><img src="http://farm{{i.flickr_farm}}.static.flickr.com/{{i.flickr_server}}/{{i.flickr_id}}_{{i.flickr_secret}}_s.jpg" width="75" height="75" /></a>{% endif %}
 {% endfor %}
